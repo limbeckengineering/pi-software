@@ -14,7 +14,7 @@ echo "$(tput setaf 6)Internet connection required.$(tput sgr0)"
 
 read -p "$(tput bold ; tput setaf 2)Press [Enter] to begin, [Ctrl-C] to abort...$(tput sgr0)"
 
-echo "$(tput setaf6)Creating directories needed in installation...$(tput sgr0)"
+echo "$(tput setaf 6)Creating directories needed in installation...$(tput sgr0)"
 cd /home/pi
 mkdir scripts
 cd scripts
