@@ -12,6 +12,8 @@ echo "$(tput setaf 6) This scripts will configure your Raspberry Pi for ________
 echo "$(tput setaf 6)Software currently compatible with RASPBIAN only.$(tput sgr0)"
 echo "$(tput setaf 6)Internet connection required.$(tput sgr0)"
 
+echo "$(tput bold ; tput setaf 6)Remember$(tput sgr0) $(tput setaf 6)Enable Camera and then reboot in Raspi-Config $(tput sgr0)"
+
 read -p "$(tput bold ; tput setaf 2)Press [Enter] to begin, [Ctrl-C] to abort...$(tput sgr0)"
 
 echo "$(tput setaf 6)Creating directories needed in installation...$(tput sgr0)"
