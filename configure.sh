@@ -10,7 +10,7 @@ fi
 echo "$(tput setaf 6) This scripts will configure your Raspberry Pi for _________________________.$(tput sgr0)"
 
 echo "$(tput setaf 6)Software currently compatible with RASPBIAN only.$(tput sgr0)"
-echo "$(tput setaf 6)MUST be installed directly to /home/pi$(tput sgr0)"
+echo "$(tput setaf 6)Internet connection required.$(tput sgr0)"
 
 read -p "$(tput bold ; tput setaf 2)Press [Enter] to begin, [Ctrl-C] to abort...$(tput sgr0)"
 
@@ -58,5 +58,10 @@ cd /home/pi/PiBits/ServoBlaster/user
 make 
 
 echo "$(tput setaf 6)ServoBlaster sucessfully installed.$(tput sgr0)"
+
+
+echo "$(tput bold ; tput setaf 6)Please first enable Raspi-config for RaspiCam.$(tput sgr0)"
+sudo raspi-config
+
 
 
