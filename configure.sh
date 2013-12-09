@@ -32,6 +32,25 @@ mv /home/pi/pi-software/RPiSerial/RXTXcomm.jar /usr/lib/jvm/java-7-openjdk-commo
 
 echo "$(tput setaf 6)Serial communication software installed sucessfully.$(tput sgr0)"
 
+echo "$(tput setaf 6)Downloading ServoBlaster (in /home/pi/PiBits)...$(tput sgr0)"
+cd /home/pi
+git clone git://github.com/richardghirst/PiBits.git
+
+echo "$(tput setaf 6)Making the userspace version of ServoBlaster...$(tput sgr0)" 
+cd /home/pi/PiBits/ServoBlaster/user
+make 
+
+echo "$(tput setaf 6)ServoBlaster sucessfully installed.$(tput sgr0)"
+
+echo "$(tput setaf 6)Moving motorcontrol.sh into /home/pi/scripts $(tput sgr0)"
+cd /home/pi
+mkdir scripts
+mv /home/pi/pi-software/software/motorcontrol.sh /home/pi/scripts
+echo "$(tput setaf 6)Done.$(tput sgr0)"
+
+
+
+
 
 
 
