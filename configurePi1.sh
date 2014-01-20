@@ -38,12 +38,12 @@ echo "$(tput setaf 3)Done.$(tput sgr0)"
 echo "$(tput setaf 3)Adding source to /etc/apt/sources.list to install gstreamer1.0 $(tput sgr0)"
 echo deb http://vontaene.de/raspbian-updates/ . main > /ect/apt/sources.list
 
-echo "$(tput setaf 3)Installing GStreamer1.0 $(tput sgr0)"
-apt-get install gstreamer1.0
-
 
 echo "$(tput setaf 3)Updating Raspbian Packages....$(tput sgr0)"
 apt-get update -q -y
+
+echo "$(tput setaf 3)Installing GStreamer1.0 $(tput sgr0)"
+apt-get install gstreamer1.0 -q -y -y
 
 echo "$(tput setaf 3)Installing Java 7...$(tput sgr0)"
 apt-get install openjdk-7-jre
