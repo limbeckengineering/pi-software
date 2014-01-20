@@ -35,6 +35,13 @@ mv /home/pi/pi-software/software/Razor.jar /home/pi/scripts/java
 mv /home/pi/pi-software/software/ArduinoTemp.jar /home/pi/scripts/java
 echo "$(tput setaf 3)Done.$(tput sgr0)"
 
+echo "$(tput setaf 3)Adding source to /etc/apt/sources.list to install gstreamer1.0 $(tput sgr0)"
+echo deb http://vontaene.de/raspbian-updates/ . main > /ect/apt/sources.list
+
+echo "$(tput setaf 3)Installing GStreamer1.0 $(tput sgr0)"
+apt-get install gstreamer1.0
+
+
 echo "$(tput setaf 3)Updating Raspbian Packages....$(tput sgr0)"
 apt-get update -q -y
 
@@ -48,8 +55,8 @@ apt-get install librxtx-java
 echo "$(tput setaf 3)Moving files located in: RPiSerial...$(tput sgr0)"
 
 cd RPiSerial
-mv /home/pi/pi-software/RPiSerial/i686-unknown-linux-gnu /usr/lib/jvm/java-7-openjdk-common/jre/lib
-mv /home/pi/pi-software/RPiSerial/RXTXcomm.jar /usr/lib/jvm/java-7-openjdk-common/jre/lib
+mv /home/pi/pi-software/communications/i686-unknown-linux-gnu /usr/lib/jvm/java-7-openjdk-common/jre/lib
+mv /home/pi/pi-software/communications/RXTXcomm.jar /usr/lib/jvm/java-7-openjdk-common/jre/lib
 
 echo "$(tput setaf 3)Serial communication software installed sucessfully.$(tput sgr0)"
 
