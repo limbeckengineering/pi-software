@@ -76,10 +76,7 @@ rm -f /home/pi/PiBits/PiFmDma
 
 echo "$(tput setaf 3)ServoBlaster sucessfully installed.$(tput sgr0)"
 
-
-
-
-sudo raspi-config
+raspi-config
 
 
 
